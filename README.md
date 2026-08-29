@@ -9,7 +9,7 @@ Add this to your `flake.nix`:
     };
   };
 
-  outputs = { self, nixplgs, ..your outputs.., shojibar, ... }@inputs:
+  outputs = { self, nixpkgs, ..your outputs.., shojibar, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
